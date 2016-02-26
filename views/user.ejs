@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app='myApp'>
+    <head>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+    <body >
+        <div class='form-container' ng-controller='myController'>
+         <p class='form-header'>user profile</p>
+         <form method='post' action='/user/update'>
+         <label>username:</label>
+            <input type='text' name='username' ng-model='user.username' disabeld><br>
+        <label>email:</label>
+            <input type='email' name='email' ng-model='user.email'><br>
+        <label>color:</label>
+            <input type='text' name='color' ng-model='user.color'><br>
+        <input type='submit' value='save'>
+         </form> 
+         <form method='post' action='/user/delete'>
+             <input type='submit' value='delete user'>
+         </form>  
+         <hr><%= msg %>
+        <hr>{{ error.err }}
+        </div>
+        
+    </body>
+</html>

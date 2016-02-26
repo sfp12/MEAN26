@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app='myApp'>
+    <head>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="js/index.js"></script>
+        <title>angular</title>
+    </head>
+    <body >
+        <div class='form-container'>
+         <p class='form-header'>login</p>
+         <form method='post' action='/login'>
+         <label>username:</label>
+            <input type='text' name='username'><br>
+        <label>password:</label>
+            <input type='password' name='password'><br>
+        <input type='submit' value='login'>
+         </form>   
+        </div>
+        <a href='/signup'>sign up</a>
+        <hr><%= msg %>
+    </body>
+</html>
